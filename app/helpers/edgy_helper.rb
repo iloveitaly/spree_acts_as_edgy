@@ -9,7 +9,7 @@ module EdgyHelper
         current_user.edgy_recommended(options)
       else
         []
-      end
+      end.select{|p| p.is_active?}
   end
 
   alias :edgy_recommended :edgy_related
@@ -20,14 +20,14 @@ module EdgyHelper
 
   def edgy_message
     if @product || (@order && @order.line_items.size == 1)
-      "Customers who bought this product also bought:"
+      t('recommendation.product') 
     elsif @order
-      "Customers who bought these products also bought:"
+      t('recommendation.products') 
     elsif current_user
       address = current_user.bill_address
-      "Welcome back#{address ? (', ' + address.firstname) : ''}. Here are our recommendations for you:"
+      "#{t(:welcome_back)}#{address ? (', ' + address.firstname) : ''}. " + t('recommendation.personal') 
     else
-      "You might also like:"
+      t('recommendation.general') 
     end
   end
 end

@@ -1,0 +1,7 @@
+en:
+  recommendation:
+    general:  "You might also like:"
+    personal: "Here are our recommendations for you:"
+    product:  "Customers who bought this product also bought:"
+    products: "Customers who bought these products also bought:"
+  welcome_back: "Welcome back"

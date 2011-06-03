@@ -15,6 +15,8 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
-
+  
+  s.add_dependency('directed-edge')
   s.add_dependency('spree_core', '>= 0.60.0')
+  s.add_dependency('spree_auth', '>= 0.60.0')
 end
