@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_acts_as_edgy'
   s.version     = '1.0.0'
-  s.summary     = 'Add gem summary here'
+  s.summary     = 'DirectedEdge support for spree'
   s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
 
